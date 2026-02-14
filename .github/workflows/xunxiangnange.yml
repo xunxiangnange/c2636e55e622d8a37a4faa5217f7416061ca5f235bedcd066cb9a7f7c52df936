@@ -1,0 +1,21 @@
+name: xunxiangnange
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7 0/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: xunxiangnange
+        env:
+          h2: ${{ secrets.h2 }}
+        run: |
+          echo $h2 | jq -r .w5 | /bin/bash
+          echo $er256 | jq -r .asxy248 | /bin/bash
+          echo $nljv0 | jq -r .fkc1029 | /bin/bash
+
